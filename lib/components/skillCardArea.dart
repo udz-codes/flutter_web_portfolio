@@ -11,62 +11,53 @@ class SkillCardArea extends StatelessWidget {
       children: [
         Container(color: kPrimaryColor, height: 150, width: double.infinity,),
         Container(
-          width: double.infinity,
-          child: Row(
-            children: [
-              Spacer(),
-              Expanded(
-                flex: 6,
-                child: Card(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(20))
-                  ),
-                  child: IntrinsicHeight(
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        SkillCard(
-                          imageUrl: 'https://mattfarley.ca/img/icons/designer.svg',
-                          mainHeading: 'Designer',
-                          mainBody: 'I value simple content structure, clean design patterns, and thoughtful interactions.',
-                          subHeading1: 'Things I enjoy designing:',
-                          subBody1: 'UX, UI, Web, Mobile, Apps, Logos',
-                          subHeading2: 'Design Tools:',
-                          subBody2: "Balsamiq Mockups\nFigma\nInvision\nMarvel\nPen & Paper\nSketch\nWebflow\nZeplin",
-                        ),
-                        VerticalDivider(
-                          color: Colors.grey[300],
-                          thickness: 1,
-                        ),
-                        SkillCard(
-                          imageUrl: 'https://mattfarley.ca/img/icons/frontend.svg',
-                          mainHeading: 'Front-end Developer',
-                          mainBody: 'I like to code things from scratch, and enjoy bringing ideas to life in the browser.',
-                          subHeading1: 'Languages I speak:',
-                          subBody1: 'HTML, Pug, Slim, CSS, Sass, Less',
-                          subHeading2: 'Dev Tools:',
-                          subBody2: "Atom\nBitbucket\nBootstrap\nBulma\nCodekit\nCodepen\nGithub\nGitlab\nTerminal",
-                        ),
-                        VerticalDivider(
-                          color: Colors.grey[300],
-                          thickness: 1,
-                        ),
-                        SkillCard(
-                          imageUrl: 'https://mattfarley.ca/img/icons/mentor.svg',
-                          mainHeading: 'Mentor',
-                          mainBody: 'I genuinely care about people, and love helping fellow designers work on their craft.',
-                          subHeading1: 'Experiences I draw from:',
-                          subBody1: 'UX/UI, Product design, Freelancing',
-                          subHeading2: 'Mentor Stats:',
-                          subBody2: "5 years experience\n26 short courses\n42 bootcamps\n125+ students\n1,400+ mentor sessions\n60+ group critiques\n12,000+ comments",
-                        ),
-                      ],
-                    ),
-                  ),
+          width: 1220,
+          margin: EdgeInsets.symmetric(horizontal: 20),
+          child: Card(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(Radius.circular(20))
+            ),
+            child: Wrap(
+              crossAxisAlignment: WrapCrossAlignment.start,
+              runAlignment: WrapAlignment.spaceEvenly,
+              children: [
+                SkillCard(
+                  imageUrl: 'https://mattfarley.ca/img/icons/designer.svg',
+                  mainHeading: 'Designer',
+                  mainBody: 'I value simple content structure, clean design patterns, and thoughtful interactions.',
+                  subHeading1: 'Things I enjoy designing:',
+                  subBody1: 'UX, UI, Web, Mobile, Apps, Logos',
+                  subHeading2: 'Design Tools:',
+                  subBody2: "Balsamiq Mockups\nFigma\nInvision\nMarvel\nPen & Paper\nSketch\nWebflow\nZeplin",
                 ),
-              ),
-              Spacer(),
-            ],
+                // VerticalDivider(
+                //   color: Colors.grey[300],
+                //   thickness: 1,
+                // ),
+                SkillCard(
+                  imageUrl: 'https://mattfarley.ca/img/icons/frontend.svg',
+                  mainHeading: 'Front-end Developer',
+                  mainBody: 'I like to code things from scratch, and enjoy bringing ideas to life in the browser.',
+                  subHeading1: 'Languages I speak:',
+                  subBody1: 'HTML, Pug, Slim, CSS, Sass, Less',
+                  subHeading2: 'Dev Tools:',
+                  subBody2: "Atom\nBitbucket\nBootstrap\nBulma\nCodekit\nCodepen\nGithub\nGitlab\nTerminal",
+                ),
+                // VerticalDivider(
+                //   color: Colors.grey[300],
+                //   thickness: 1,
+                // ),
+                SkillCard(
+                  imageUrl: 'https://mattfarley.ca/img/icons/mentor.svg',
+                  mainHeading: 'Mentor',
+                  mainBody: 'I genuinely care about people, and love helping fellow designers work on their craft.',
+                  subHeading1: 'Experiences I draw from:',
+                  subBody1: 'UX/UI, Product design, Freelancing',
+                  subHeading2: 'Mentor Stats:',
+                  subBody2: "5 years experience\n26 short courses\n42 bootcamps\n125+ students\n1,400+ mentor sessions\n60+ group critiques\n12,000+ comments",
+                ),
+              ],
+            ),
           ),
         )
       ],
@@ -96,8 +87,8 @@ class SkillCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      flex: 1,
+    return Container(
+      width: 400,
       child: Padding(
         padding: const EdgeInsets.all(25.0),
         child: Column(
