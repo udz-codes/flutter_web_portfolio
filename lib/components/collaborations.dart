@@ -24,8 +24,9 @@ class Collaborations extends StatelessWidget {
             ),
           ),
           Container(
-            margin: EdgeInsets.symmetric(horizontal: 100),
+            width: 1200,
             child: Wrap(
+              alignment: WrapAlignment.spaceEvenly,
               children: [
                 LogoImages(imageUrl: 'https://mattfarley.ca/img/logos/briteweb.svg'),
                 LogoImages(imageUrl: 'https://mattfarley.ca/img/logos/goodkind.svg'),
@@ -54,9 +55,9 @@ class LogoImages extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(10),
+      // color: Colors.red,
       child: SizedBox(
-        width: 300,
+        width: 250,
         child: Image.network(imageUrl)
       ),
     );

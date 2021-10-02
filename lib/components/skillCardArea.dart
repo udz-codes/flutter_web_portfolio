@@ -14,6 +14,7 @@ class SkillCardArea extends StatelessWidget {
           width: 1220,
           margin: EdgeInsets.symmetric(horizontal: 20),
           child: Card(
+            elevation: 5,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.all(Radius.circular(20))
             ),

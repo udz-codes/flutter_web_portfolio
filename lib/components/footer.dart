@@ -20,92 +20,28 @@ class Footer extends StatelessWidget {
             child: Image.network('https://mattfarley.ca/img/mf-logo-white.svg'),
           ),
           SizedBox(height: 20,),
-          Text(
-            'Living, learning, & leveling up\none day at a time.',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              fontSize: 26,
-              fontWeight: FontWeight.w300,
-              color: Colors.white
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(
+              'Living, learning, & leveling up\none day at a time.',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 26,
+                fontWeight: FontWeight.w300,
+                color: Colors.white
+              ),
             ),
           ),
           SizedBox(height: 50,),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+          Wrap(
+            alignment: WrapAlignment.center,
             children: [
-              SizedBox(width: 10,),
-              ElevatedButton(
-                onPressed: () {},
-                child: FaIcon(FontAwesomeIcons.twitter, color: Colors.white, size: 16),
-                style: ElevatedButton.styleFrom(
-                  elevation: 0,
-                  side: BorderSide(color: Colors.white),
-                  shape: CircleBorder(),
-                  padding: EdgeInsets.all(18),
-                  primary: kPrimaryColor,
-                ),
-              ),
-              SizedBox(width: 10,),
-              ElevatedButton(
-                onPressed: () {},
-                child: FaIcon(FontAwesomeIcons.dribbble, color: Colors.white, size: 16),
-                style: ElevatedButton.styleFrom(
-                  elevation: 0,
-                  side: BorderSide(color: Colors.white),
-                  shape: CircleBorder(),
-                  padding: EdgeInsets.all(18),
-                  primary: kPrimaryColor,
-                ),
-              ),
-              SizedBox(width: 10),
-              ElevatedButton(
-                onPressed: () {},
-                child: FaIcon(FontAwesomeIcons.linkedin, color: Colors.white, size: 16),
-                style: ElevatedButton.styleFrom(
-                  elevation: 0,
-                  side: BorderSide(color: Colors.white),
-                  shape: CircleBorder(),
-                  padding: EdgeInsets.all(18),
-                  primary: kPrimaryColor,
-                ),
-              ),
-              SizedBox(width: 10,),
-              ElevatedButton(
-                onPressed: () {},
-                child: FaIcon(FontAwesomeIcons.angellist, color: Colors.white, size: 16),
-                style: ElevatedButton.styleFrom(
-                  elevation: 0,
-                  side: BorderSide(color: Colors.white),
-                  shape: CircleBorder(),
-                  padding: EdgeInsets.all(18),
-                  primary: kPrimaryColor,
-                ),
-              ),
-              SizedBox(width: 10,),
-              ElevatedButton(
-                onPressed: () {},
-                child: FaIcon(FontAwesomeIcons.productHunt, color: Colors.white, size: 16),
-                style: ElevatedButton.styleFrom(
-                  elevation: 0,
-                  side: BorderSide(color: Colors.white),
-                  shape: CircleBorder(),
-                  padding: EdgeInsets.all(18),
-                  primary: kPrimaryColor,
-                ),
-              ),
-              SizedBox(width: 10,),
-              ElevatedButton(
-                onPressed: () {},
-                child: FaIcon(FontAwesomeIcons.envelope, color: Colors.white, size: 16,),
-                style: ElevatedButton.styleFrom(
-                  elevation: 0,
-                  side: BorderSide(color: Colors.white),
-                  shape: CircleBorder(),
-                  padding: EdgeInsets.all(18),
-                  primary: kPrimaryColor,
-                ),
-              ),
-              SizedBox(width: 10,),
+              LogoButton(logo: FontAwesomeIcons.twitter),
+              LogoButton(logo: FontAwesomeIcons.dribbble),
+              LogoButton(logo: FontAwesomeIcons.linkedin),
+              LogoButton(logo: FontAwesomeIcons.angellist),
+              LogoButton(logo: FontAwesomeIcons.productHunt),
+              LogoButton(logo: FontAwesomeIcons.envelope),
             ],
           ),
           SizedBox(height: 50,),
@@ -138,6 +74,33 @@ class Footer extends StatelessWidget {
             ],
           )
         ],
+      ),
+    );
+  }
+}
+
+class LogoButton extends StatelessWidget {
+
+  final IconData logo;
+
+  const LogoButton({
+    required this.logo
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(5.0),
+      child: ElevatedButton(
+        onPressed: () {},
+        child: FaIcon(logo, color: Colors.white, size: 16,),
+        style: ElevatedButton.styleFrom(
+          elevation: 0,
+          side: BorderSide(color: Colors.white),
+          shape: CircleBorder(),
+          padding: EdgeInsets.all(18),
+          primary: kPrimaryColor,
+        ),
       ),
     );
   }

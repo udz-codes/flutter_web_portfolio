@@ -6,9 +6,9 @@ class MainAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 120,
-      padding: EdgeInsets.symmetric(horizontal: 50),
-      width: double.infinity,
+      height: 100,
+      padding: EdgeInsets.symmetric(horizontal: 20),
+      width: 1200,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.center,

@@ -125,6 +125,7 @@ class StartupTile extends StatelessWidget {
       width: 400,
       margin: EdgeInsets.all(10),
       child: Card(
+        elevation: 5,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(14))),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 25),

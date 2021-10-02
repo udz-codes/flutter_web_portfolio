@@ -14,8 +14,9 @@ class PurpleCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 150, horizontal: 50),
+      padding: EdgeInsets.symmetric(vertical: 150),
       color: kPrimaryColor,
+      width: double.infinity,
       child: Column(
         children: [
           Text(
@@ -28,13 +29,17 @@ class PurpleCard extends StatelessWidget {
             ),
           ),
           SizedBox(height: 20,),
-          Text(
-            text,
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.w300,
-              color: Colors.white
+          Container(
+            width: 1200,
+            padding: EdgeInsets.symmetric(horizontal: 10),
+            child: Text(
+              text,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.w300,
+                color: Colors.white
+              ),
             ),
           )
         ],
