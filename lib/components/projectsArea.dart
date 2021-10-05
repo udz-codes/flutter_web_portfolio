@@ -11,7 +11,7 @@ class ProjectsArea extends StatelessWidget {
             backgroudUrl: 'https://mattfarley.ca/img/projects/wfdesignbuild.png',
           ),
           ProjectTile(
-            backgroudUrl: 'https://mattfarley.ca/img/projects/awg2020.png',
+            backgroudUrl: 'https://repository-images.githubusercontent.com/310002652/127ade80-35bf-11eb-90dd-a43fabb51086',
           ),
           ProjectTile(
             backgroudUrl: 'https://mattfarley.ca/img/projects/chronicled.png',

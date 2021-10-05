@@ -22,7 +22,7 @@ class StartProject extends StatelessWidget {
           height: 200,
           width: 1200,
           child: Card(
-            color: kSecondaryColor,
+            color: kPrimaryAccentColor,
             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14.0)),
             child: Wrap(
               runAlignment: WrapAlignment.spaceEvenly,

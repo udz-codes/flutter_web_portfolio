@@ -14,13 +14,14 @@ class SkillCardArea extends StatelessWidget {
           width: 1220,
           margin: EdgeInsets.symmetric(horizontal: 20),
           child: Card(
-            elevation: 5,
+            color: kPrimaryAccentColor,
+            elevation: 2,
+            shadowColor: Colors.black,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.all(Radius.circular(20))
             ),
             child: Wrap(
-              crossAxisAlignment: WrapCrossAlignment.start,
-              runAlignment: WrapAlignment.spaceEvenly,
+              alignment: WrapAlignment.spaceEvenly,
               children: [
                 SkillCard(
                   imageUrl: 'https://mattfarley.ca/img/icons/designer.svg',
@@ -89,7 +90,7 @@ class SkillCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 400,
+      width: 350,
       child: Padding(
         padding: const EdgeInsets.all(25.0),
         child: Column(
@@ -97,7 +98,7 @@ class SkillCard extends StatelessWidget {
           children: [
             Container(
               height: 100,
-              child: Image.network(imageUrl)
+              child: Image.network(imageUrl, color: Colors.white70,)
             ),
             Text(
               mainHeading,

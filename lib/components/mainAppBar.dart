@@ -15,8 +15,7 @@ class MainAppBar extends StatelessWidget {
         children: [
           Container(
             height: 50,
-            width: 50,
-            child: Image.network("https://mattfarley.ca/img/mf-logo.svg")
+            child: Image.network("https://i.imgur.com/Xu87bo2.png")
           ),
           Row(
             children: [

@@ -19,11 +19,12 @@ class MyWork extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 30,
                   fontWeight: FontWeight.bold,
+                  color: kPrimaryAccentColor
                 ),
               ),
               SizedBox(height: 20,),
               Text(
-                "Here are a few design projects I've worked on recently. Want to see more? Email me.",
+                "Here are a few projects I've worked on recently. Want to see more? Email me.",
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 20,
